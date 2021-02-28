@@ -7,9 +7,10 @@ const userSchema = new Schema({
 });
 
 const blockSchema = new Schema({
+  index: Number,
   hash: String,
-  prevHash: String,
-  timeStamp: String,
+  previousHash: String,
+  timestamp: Date,
   data: String,
   nonce: String,
 });
