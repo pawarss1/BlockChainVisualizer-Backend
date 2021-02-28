@@ -8,7 +8,7 @@ const isNullOrUndefined = (val) => {
 };
 
 routes.get("/login", async (req, res) => {
-  const { userName, password } = req.body;
+  const { userName, password } = req.query;
   const existingUser = await userDb.findOne({ userName });
   if (isNullOrUndefined(userName) || isNullOrUndefined(password)) {
     res
@@ -80,5 +80,6 @@ routes.post("/signUp", async (req, res) => {
     });
   }
 });
+
 
 module.exports = routes;
