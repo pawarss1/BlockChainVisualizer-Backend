@@ -81,5 +81,8 @@ routes.post("/signUp", async (req, res) => {
   }
 });
 
+routes.get("/", async (req, res) => {
+  res.send("Server Running!");
+})
 
 module.exports = routes;
